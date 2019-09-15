@@ -362,7 +362,7 @@ export class SlideContainer extends AbsoluteLayout {
           // if velocityScrolling is enabled then calculate the velocitty
 
           // swiping left to right.
-          if (args.deltaX > pageWidth / 3) {
+          if (args.deltaX > pageWidth / 10) {
             if (this.hasPrevious) {
               this.transitioning = true;
               this.showLeftSlide(
@@ -382,7 +382,7 @@ export class SlideContainer extends AbsoluteLayout {
             return;
           }
           // swiping right to left
-          else if (args.deltaX < -pageWidth / 3) {
+          else if (args.deltaX < -pageWidth / 10) {
             if (this.hasNext) {
               this.transitioning = true;
               this.showRightSlide(
